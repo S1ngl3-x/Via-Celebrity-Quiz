@@ -258,30 +258,8 @@ const HomepageLayout = () => (
             You sign up for a game account.
             Once you are logged in, there's an endless amount of fun and thrilling quizzes waiting four you.
             In each quiz you are presented with a quote and your job is to match the quote with a person it belongs to.
+              You can review your previous results.
           </p>
-
-          <Divider
-              as='h4'
-              className='header'
-              horizontal
-              style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-          >
-            Examples
-          </Divider>
-
-          <Header as='h3' style={{ fontSize: '2em' }}>
-            No. 1
-          </Header>
-          <p style={{ fontSize: '1.33em' }}>
-            “It would be really disappointing — not really — but it would depend on what’s inside the magazine. I don’t think Ivanka would do that, although she does have a very nice figure. I’ve said if Ivanka weren’t my daughter, perhaps I’d be dating her.”
-          </p>
-
-          <Button as='a' size='large'>
-            It is Trump
-          </Button>
-          <Button as='a' size='large'>
-            My heart says it's Taylor Swift
-          </Button>
         </Container>
       </Segment>
 
