@@ -60,9 +60,9 @@ const HomepageHeading = ({ mobile }) => (
       <div>
         <div className="ui right labeled button" role="button" tabIndex="0">
           <button
-              onClick={() => window.location.href="https://github.com/S1ngl3-x/Via-Celebrity-Quiz"}
+              onClick={() => window.location.href="https://github.com/S1ngl3-x/Celebrity-Quiz-App"}
               className="ui grey button"><i aria-hidden="true" className="github icon"></i>GitHub</button>
-          <a href="https://github.com/S1ngl3-x/Via-Celebrity-Quiz" className="ui grey left pointing basic label">1 <i
+          <a href="https://github.com/S1ngl3-x/Celebrity-Quiz-App" className="ui grey left pointing basic label">1 <i
               className="star outline icon"></i></a></div>
       </div>
     </Container>
