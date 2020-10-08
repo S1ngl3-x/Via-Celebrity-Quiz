@@ -4,6 +4,7 @@
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import gitButton from "../components/gitButton";
 import {
   Button,
   Container,
@@ -31,11 +32,13 @@ const { MediaContextProvider, Media } = createMedia({
  * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
  * components for such things.
  */
+
+
 const HomepageHeading = ({ mobile }) => (
     <Container text>
       <Header
           as='h1'
-          content='The best quiz ever!!!'
+          content='Celebrity Quiz'
           inverted
           style={{
             fontSize: mobile ? '2em' : '4em',
@@ -54,10 +57,14 @@ const HomepageHeading = ({ mobile }) => (
             marginTop: mobile ? '0.5em' : '1.5em',
           }}
       />
-      <Button primary size='huge'>
-        Register NOW
-        <Icon name='right arrow' />
-      </Button>
+      <div>
+        <div className="ui right labeled button" role="button" tabIndex="0">
+          <button
+              onClick={() => window.location.href="https://github.com/S1ngl3-x/Via-Celebrity-Quiz"}
+              className="ui grey button"><i aria-hidden="true" className="github icon"></i>GitHub</button>
+          <a href="https://github.com/S1ngl3-x/Via-Celebrity-Quiz" className="ui grey left pointing basic label">1 <i
+              className="star outline icon"></i></a></div>
+      </div>
     </Container>
 )
 
@@ -92,30 +99,6 @@ class DesktopContainer extends Component {
                 style={{ minHeight: 700, padding: '1em 0em' }}
                 vertical
             >
-              <Menu
-                  fixed={fixed ? 'top' : null}
-                  inverted={!fixed}
-                  pointing={!fixed}
-                  secondary={!fixed}
-                  size='large'
-              >
-                <Container>
-                  <Menu.Item as='a' active>
-                    Home
-                  </Menu.Item>
-                  <Menu.Item as='a'>Work</Menu.Item>
-                  <Menu.Item as='a'>Company</Menu.Item>
-                  <Menu.Item as='a'>Careers</Menu.Item>
-                  <Menu.Item position='right'>
-                    <Button as='a' inverted={!fixed}>
-                      Log in
-                    </Button>
-                    <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                      Sign Up
-                    </Button>
-                  </Menu.Item>
-                </Container>
-              </Menu>
               <HomepageHeading />
             </Segment>
           </Visibility>
@@ -237,11 +220,6 @@ const HomepageLayout = () => (
               <Image bordered rounded size='large' src='/images/mind.jpg' />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row>
-            <Grid.Column textAlign='center'>
-              <Button size='huge'>I Am Ready!</Button>
-            </Grid.Column>
-          </Grid.Row>
         </Grid>
       </Segment>
 
@@ -288,7 +266,7 @@ const HomepageLayout = () => (
               horizontal
               style={{ margin: '3em 0em', textTransform: 'uppercase' }}
           >
-            <a href='#'>Examples</a>
+            Examples
           </Divider>
 
           <Header as='h3' style={{ fontSize: '2em' }}>
@@ -297,100 +275,22 @@ const HomepageLayout = () => (
           <p style={{ fontSize: '1.33em' }}>
             “It would be really disappointing — not really — but it would depend on what’s inside the magazine. I don’t think Ivanka would do that, although she does have a very nice figure. I’ve said if Ivanka weren’t my daughter, perhaps I’d be dating her.”
           </p>
+
           <Button as='a' size='large'>
-            I'm Still Quite Interested
+            It is Trump
+          </Button>
+          <Button as='a' size='large'>
+            My heart says it's Taylor Swift
           </Button>
         </Container>
       </Segment>
 
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
-          <Grid divided inverted stackable>
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <Header inverted as='h4' content='About' />
-                <List link inverted>
-                  <List.Item as='a'>Sitemap</List.Item>
-                  <List.Item as='a'>Contact Us</List.Item>
-                  <List.Item as='a'>Religious Ceremonies</List.Item>
-                  <List.Item as='a'>Gazebo Plans</List.Item>
-                </List>
-              </Grid.Column>
-              <Grid.Column width={3}>
-                <Header inverted as='h4' content='Services' />
-                <List link inverted>
-                  <List.Item as='a'>Banana Pre-Order</List.Item>
-                  <List.Item as='a'>DNA FAQ</List.Item>
-                  <List.Item as='a'>How To Access</List.Item>
-                  <List.Item as='a'>Favorite X-Men</List.Item>
-                </List>
-              </Grid.Column>
-              <Grid.Column width={7}>
-                <Header as='h4' inverted>
-                  Footer Header
-                </Header>
-                <p>
-                  Extra space for a call to action inside the footer that could help re-engage users.
-                </p>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
+          <p>Web page presenting VIA semester's project by Adam Lipowski.</p>
         </Container>
       </Segment>
     </ResponsiveContainer>
 )
 
 export default HomepageLayout
-
-
-// import { Modal, Button, Icon } from 'semantic-ui-react'
-//
-// import SmallImage from './SmallImage.png'
-// import LargeImage from './LargeImage.png'
-//
-// export default function Home() {
-//   return (
-//     <div className="centered">
-//       <Icon size="massive" name="world" />
-//       <div className="separator" />
-//       <Modal trigger={<Button>Show Modal</Button>}>
-//         <Modal.Header>
-//           <em>publicPath</em> should be set to <em>/_next/static/</em>
-//         </Modal.Header>
-//         <Modal.Content>
-//           <Modal.Description>
-//             <div className="wrapper">
-//               <div className="row">
-//                 <p>
-//                   Larger content should be still available as a fallback to{' '}
-//                   <em>fileLoader</em> but it should not pollute{' '}
-//                   <em>/.next/static/css</em> folder. You should see two images
-//                   below. One, smaller, loaded as data url, and one, bigger,
-//                   loaded via url.
-//                 </p>
-//               </div>
-//               <div className="row">
-//                 <img src={SmallImage} />
-//                 <p>
-//                   A small image should be loaded as data url:{' '}
-//                   <em>{SmallImage.substr(0, 100)}...</em>
-//                 </p>
-//               </div>
-//
-//               <div className="row">
-//                 <img src={LargeImage} />
-//                 <p>
-//                   A large image should be loaded as a url: <em>{LargeImage}</em>
-//                 </p>
-//               </div>
-//               <p className="border">
-//                 You should also still be able to load regular css. This text
-//                 should have border.
-//               </p>
-//             </div>
-//           </Modal.Description>
-//         </Modal.Content>
-//       </Modal>
-//     </div>
-//   )
-// }
