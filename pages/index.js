@@ -235,7 +235,7 @@ const HomepageLayout = () => (
 
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
-          <p>Web page presenting VIA semester's project by Adam Lipowski.</p>
+          <p>Web page presenting VIA semester's project made by Adam Lipowski.</p>
         </Container>
       </Segment>
     </ResponsiveContainer>
