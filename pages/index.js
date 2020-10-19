@@ -233,6 +233,29 @@ const HomepageLayout = () => (
         </Container>
       </Segment>
 
+        <Segment style={{ padding: '8em 0em' }} vertical>
+            <Container text>
+                <Header as='h3' style={{ fontSize: '2em' }}>
+                    Progress Documentation
+                </Header>
+                <p style={{ fontSize: '1.33em' }}>
+                    Below are project status assessments.
+                </p>
+            </Container>
+        </Segment>
+
+        <Segment style={{ padding: '8em 0em' }} vertical>
+            <Container text>
+                <Header as='h3' style={{ fontSize: '2em' }}>
+                    19.10.2020
+                </Header>
+                <p style={{ fontSize: '1.33em' }}>
+                    Project initialized on GitHub.
+                    Basic POST and GET functionality added.
+                </p>
+            </Container>
+        </Segment>
+
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
           <p>Web page presenting VIA semester's project made by Adam Lipowski.</p>
