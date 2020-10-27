@@ -2,5 +2,5 @@
 
 [Web page](https://via-celebrity-quiz.vercel.app)
 
-Project's [GitHub](https://github.com/S1ngl3-x/Celebrity-Quiz-App).
+Project's [GitHub](https://github.com/S1ngl3-x/Celebrity-App).
 
