@@ -289,6 +289,17 @@ const HomepageLayout = () => (
             </Container>
         </Segment>
 
+        <Segment style={{ padding: '8em 0em' }} vertical>
+            <Container text>
+                <Header as='h3' style={{ fontSize: '2em' }}>
+                    11.11.2020
+                </Header>
+                <p style={{ fontSize: '1.33em' }}>
+                    Implement trivial frontend page.
+                </p>
+            </Container>
+        </Segment>
+
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
           <p>Web page presenting VIA semester's project made by Adam Lipowski.</p>
